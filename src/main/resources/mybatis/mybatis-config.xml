@@ -22,6 +22,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/super/dao/UserMapper.xml"/>
+        <mapper resource="com/sea/dao/UserMapper.xml"/>
     </mappers>
 </configuration>
