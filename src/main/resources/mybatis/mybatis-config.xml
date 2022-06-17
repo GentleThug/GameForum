@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--第一个问题：
+                com.mysql.jdbc.Driver和mysql-connector-java 5一起用。
+                com.mysql.cj.jdbc.Driver和mysql-connector-java 6+ 一起用。
+                第二个问题：
+                serverTimezone=Asia/Shanghai 要加时区，不加时区会报错
+                -->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${passwprd}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/super/dao/UserMapper.xml"/>
+    </mappers>
+</configuration>

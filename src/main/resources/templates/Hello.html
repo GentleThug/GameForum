@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>helloworld</title>
+</head>
+<body>
+<div id="app">
+  <input type="text" v-model="something">
+  <!-- 注意这里面引用vue必须在vue app容器中 -->
+  <p>hello {{something}}</p>
+</div>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.js"></script>
+<script>
+  let app=new Vue({
+    el:'#app',
+    data: {
+      something:'join'
+    }
+  })
+</script>
+</html>
